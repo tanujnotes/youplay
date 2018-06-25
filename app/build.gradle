@@ -24,8 +24,8 @@ android {
             debuggable false
             useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "youtube_key", "\"YOUTUBE_KEY\""
-            buildConfigField "String", "google_web_client_id", "\"GOOGLE_WEB_CLIENT_ID\""
+            buildConfigField "String", "youtube_key", "\"AIzaSyBKJaNF5zMDqhSHs_grKddyn0YvnrGdZFc\""
+            buildConfigField "String", "google_web_client_id", "\"50118946969-l8cfjdm484esimn5p8qr8u6tfq9urt4g.apps.googleusercontent.com\""
             buildConfigField "String", "base_url", "\"https://www.googleapis.com/youtube/v3/\""
         }
         debug {
@@ -36,8 +36,8 @@ android {
             applicationIdSuffix ".debug"
             versionNameSuffix "debug"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "youtube_key", "\"YOUTUBE_KEY\""
-            buildConfigField "String", "google_web_client_id", "\"GOOGLE_WEB_CLIENT_ID\""
+            buildConfigField "String", "youtube_key", "\"AIzaSyBKJaNF5zMDqhSHs_grKddyn0YvnrGdZFc\""
+            buildConfigField "String", "google_web_client_id", "\"50118946969-l8cfjdm484esimn5p8qr8u6tfq9urt4g.apps.googleusercontent.com\""
             buildConfigField "String", "base_url", "\"https://www.googleapis.com/youtube/v3/\""
         }
     }
