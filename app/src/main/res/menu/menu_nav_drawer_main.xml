@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_feature"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_nav_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/menu_nav_favorites"
+            android:title="@string/favorites" />
+        <item
+            android:id="@+id/menu_nav_history"
+            android:title="@string/watch_history" />
+        <item
+            android:id="@+id/menu_nav_timer"
+            android:title="@string/timer" />
+        <!--<item-->
+            <!--android:id="@+id/menu_nav_share"-->
+            <!--android:title="@string/share" />-->
+    </group>
+</menu>

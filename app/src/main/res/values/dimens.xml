@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bottom_sheet_peek_height">100dp</dimen>
+    <dimen name="youtube_view_collapsed_width">180dp</dimen>
+    <dimen name="youtube_view_collapsed_width_large">280dp</dimen>
+
+    <dimen name="video_thumbnail_width_default">128dp</dimen>
+    <dimen name="video_thumbnail_height_default">72dp</dimen>
+    <dimen name="video_thumbnail_width_large">160dp</dimen>
+    <dimen name="video_thumbnail_height_large">90dp</dimen>
+
+    <dimen name="tab_layout_height">48dp</dimen>
+    <dimen name="video_duration_margin_top">52dp</dimen>
+    <dimen name="video_duration_margin_top_large">70dp</dimen>
+    <dimen name="video_player_margin_top">22dp</dimen>
+    <dimen name="controls_layout_height">36dp</dimen>
+    <dimen name="load_more_bar_height">100dp</dimen>
+    <dimen name="load_more_bar_height_small">80dp</dimen>
+</resources>

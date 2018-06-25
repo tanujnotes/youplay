@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_suggestion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/search_suggestion_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/clear_search_text"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:text="@string/ic_search"
+        android:textSize="24sp"
+        android:tint="@color/grey_500" />
+
+    <TextView
+        android:id="@+id/search_suggestion_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingBottom="2dp"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:text="@string/search_placeholder"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+</FrameLayout>

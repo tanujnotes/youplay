@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ic_home">&#xe88a;</string>
+    <string name="ic_play">&#xe037;</string>
+    <string name="ic_pause">&#xe034;</string>
+    <string name="ic_next">&#xe044;</string>
+    <string name="ic_prev">&#xe045;</string>
+    <string name="ic_close">&#xe5cd;</string>
+    <string name="ic_search">&#xe8b6;</string>
+    <string name="ic_repeat">&#xe040;</string>
+    <string name="ic_repeat_1">&#xe041;</string>
+    <string name="ic_shuffle">&#xe043;</string>
+    <string name="ic_restore">&#xe8b3;</string>
+    <string name="ic_playlist">&#xe05f;</string>
+    <string name="ic_fullscreen">&#xe5d0;</string>
+    <string name="ic_favorite_on">&#xe87d;</string>
+    <string name="ic_favorite_off">&#xe87e;</string>
+    <string name="ic_add">&#xe145;</string>
+
+    <string name="ic_share">&#xe80d;</string>
+    <string name="ic_menu">&#xe5d2;</string>
+
+    <string name="ic_more_horizontal">&#xe5d3;</string>
+    <string name="ic_more_vertical">&#xe5d4;</string>
+    <string name="ic_remove_circle">&#xe15c;</string>
+    <string name="ic_arrow_back">&#xe5c4;</string>
+    <string name="ic_key_arrow_down">&#xe313;</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <com.youplay.SquareImageView
+        android:id="@+id/channel_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/video_thumbnail" />
+
+    <TextView
+        android:id="@+id/channel_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="4dp"
+        android:background="@drawable/bottom_top_grayscale_gradient"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</FrameLayout>

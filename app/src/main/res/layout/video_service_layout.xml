@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/black">
+
+    <FrameLayout
+        android:id="@+id/youtube_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/video_player_margin_top"
+        android:minHeight="@dimen/bottom_sheet_peek_height">
+
+        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+            android:id="@+id/youtube_view"
+            android:layout_width="@dimen/youtube_view_collapsed_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true" />
+
+        <ProgressBar
+            android:id="@+id/video_buffering_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true" />
+
+        <TextView
+            android:id="@+id/helper_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            android:padding="8dp"
+            android:text="@string/drag_to_move"
+            android:textColor="@color/white_less_transparent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/queue_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/youtube_view_container"
+        android:background="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/ic_favorite_off"
+            android:textColor="@color/grey_300"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/now_playing_video_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white_less_transparent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/channel_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white_less_transparent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/autoplay_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/video_share"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:text="@string/ic_share"-->
+        <!--android:textColor="@color/grey_300"-->
+        <!--android:textSize="32sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/queue_menu"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:text="@string/ic_more_horizontal"-->
+        <!--android:textColor="@color/grey_300"-->
+        <!--android:textSize="32sp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/queue_menu_layout"
+        android:background="@color/dark_grey"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/queue_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/current_queue"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_300"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recommendations_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/recommendations"
+            android:textAllCaps="true"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/service_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_layout"
+        android:layout_marginBottom="@dimen/controls_layout_height"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/black"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/queue_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recommendations_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/controls_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/controls_layout_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/close_window"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/ic_close"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/playback_repeat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/ic_repeat"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/go_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ic_search"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/playback_shuffle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/ic_shuffle"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/ic_arrow_back"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/floating_controls_layout"
+        android:layout_width="@dimen/youtube_view_collapsed_width"
+        android:layout_height="@dimen/video_player_margin_top"
+        android:background="@color/black_transparent">
+
+        <TextView
+            android:id="@+id/floating_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:text="@string/ic_menu"
+            android:textColor="@color/grey_500"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/floating_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:gravity="center"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:text="@string/ic_pause"
+            android:textColor="@color/grey_500"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/floating_next_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:text="@string/ic_next"
+            android:textColor="@color/grey_500"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+</RelativeLayout>

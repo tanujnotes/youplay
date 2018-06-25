@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e53f53</color>
+    <color name="colorPrimaryDark">#BA3343</color>
+    <color name="colorAccent">#FFAB00</color>
+    <color name="colorAccentDark">#bf7300</color>
+    <color name="colorAccentTransparent">#38ffab00</color>
+
+    <color name="green_700">#388E3C</color>
+    <color name="red_900">#b71c1c</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="black_transparent">#96000000</color>
+    <color name="black_less_transparent">#c0000000</color>
+    <color name="white_transparent">#32ffffff</color>
+    <color name="white_less_transparent">#c0ffffff</color>
+
+    <color name="dark_grey">#212121</color>
+    <color name="light_grey">#757575</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="grey_400">#bdbdbd</color>
+    <color name="grey_500">#9e9e9e</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_500_transparent">#aa9e9e9e</color>
+    <color name="grey_300_transparent">#77e0e0e0</color>
+
+    <color name="video_title_color">@color/grey_800</color>
+</resources>

@@ -1,0 +1,84 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.shytan.youplay"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "v0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "youtube_key", "\"YOUTUBE_KEY\""
+            buildConfigField "String", "google_web_client_id", "\"GOOGLE_WEB_CLIENT_ID\""
+            buildConfigField "String", "base_url", "\"https://www.googleapis.com/youtube/v3/\""
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            useProguard false
+            signingConfig signingConfigs.debug
+            applicationIdSuffix ".debug"
+            versionNameSuffix "debug"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "youtube_key", "\"YOUTUBE_KEY\""
+            buildConfigField "String", "google_web_client_id", "\"GOOGLE_WEB_CLIENT_ID\""
+            buildConfigField "String", "base_url", "\"https://www.googleapis.com/youtube/v3/\""
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    implementation 'com.artemzin.rxjava:proguard-rules:1.0.16.0'
+    implementation 'io.reactivex:rxjava:1.1.1'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.google.firebase:firebase-core:15.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+    implementation 'com.github.PierfrancescoSoffritti:AndroidYouTubePlayer:3.0.2'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+//    compile 'net.zetetic:android-database-sqlcipher:3.5.5@aar'
+}
+
+greendao {
+    schemaVersion 1
+}
+
+apply plugin: 'com.google.gms.google-services'

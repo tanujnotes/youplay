@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/grey_100"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/playlist_videos_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/load_more_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/load_more_bar_height_small"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/white_less_transparent"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+</FrameLayout>

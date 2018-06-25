@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/grey_100"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/playlist_videos_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp" />
+
+    <ProgressBar
+        android:id="@+id/load_more_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/load_more_bar_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:background="@color/white_less_transparent"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/playlist_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:background="@color/grey_300"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/playlist_video_count_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/light_grey" />
+
+        <TextView
+            android:id="@+id/playlist_add_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:text="@string/add_all"
+            android:textAllCaps="true"
+            android:textColor="@color/light_grey" />
+
+        <TextView
+            android:id="@+id/playlist_play_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:text="@string/play_all"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+</FrameLayout>

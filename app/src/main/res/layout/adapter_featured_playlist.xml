@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="1dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/featured_playlist_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/featured_playlist_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/video_thumbnail"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/featured_playlist_title"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:maxLines="2"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/video_title_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/featured_playlist_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="@color/colorPrimary"
+            app:backgroundTint="@color/white_less_transparent"
+            app:fabSize="mini" />
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

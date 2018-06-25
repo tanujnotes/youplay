@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "166984447416",
+    "firebase_url": "https://youplay-371db.firebaseio.com",
+    "project_id": "youplay-371db",
+    "storage_bucket": "youplay-371db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166984447416:android:3bcc1a1f76607dce",
+        "android_client_info": {
+          "package_name": "com.shytan.youplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166984447416-a1j6algsg9v188qnj205q3j9ssku5355.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXYOt4kWcVE5i0yGtjvDGK5LY1z1nvQI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166984447416:android:e5b0f8ed94abeb8c",
+        "android_client_info": {
+          "package_name": "com.shytan.youplay.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166984447416-a1j6algsg9v188qnj205q3j9ssku5355.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXYOt4kWcVE5i0yGtjvDGK5LY1z1nvQI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

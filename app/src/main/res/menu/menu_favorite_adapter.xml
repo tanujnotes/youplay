@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <item
+        android:id="@+id/menu_share_video"
+        android:title="@string/share" />
+
+    <item
+        android:id="@+id/menu_play_next"
+        android:title="@string/play_next" />
+
+    <item
+        android:id="@+id/menu_add_to_queue"
+        android:title="@string/add_to_queue" />
+
+    <item
+        android:id="@+id/menu_open_channel"
+        android:title="@string/open_channel" />
+
+    <item
+        android:id="@+id/menu_video_details"
+        android:title="@string/video_details" />
+
+    <item
+        android:id="@+id/menu_remove_video"
+        android:title="@string/remove_video" />
+
+</menu>
