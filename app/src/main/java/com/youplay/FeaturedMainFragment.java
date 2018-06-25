@@ -105,10 +105,11 @@ public class FeaturedMainFragment extends Fragment implements View.OnClickListen
         map.put("part", "snippet");
         map.put("maxResults", 50);
         map.put("chart", "mostPopular");
-        map.put("regionCode", pm.getUserCountry());
         map.put("videoCategoryId", videoCategoryId);
         map.put("key", BuildConfig.youtube_key);
+        if (!pm.getUserCountry().isEmpty()) map.put("regionCode", pm.getUserCountry());
         if (nextPageToken != null) map.put("pageToken", nextPageToken);
+
         networkService.getVideos(map)
                 .flatMap(new Func1<ItemModel, Observable<ItemModel>>() {
                     @Override
