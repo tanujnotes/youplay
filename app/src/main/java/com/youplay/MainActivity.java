@@ -848,10 +848,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 firebaseAnalytics.logEvent(AppConstants.Event.TIMER_CLICKED, new Bundle());
                 return true;
 
-            case R.id.menu_nav_share:
-                Utils.sendShareAppIntent(this, firebaseAnalytics);
-                drawerLayout.closeDrawers();
-                return true;
+//            case R.id.menu_nav_share:
+//                Utils.sendShareAppIntent(this, firebaseAnalytics);
+//                drawerLayout.closeDrawers();
+//                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
