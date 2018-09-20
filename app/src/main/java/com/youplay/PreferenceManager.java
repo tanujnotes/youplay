@@ -121,7 +121,7 @@ public class PreferenceManager {
     }
 
     public String getUserCountry() {
-        return getSharedPref().getString(USER_COUNTRY, "");
+        return getSharedPref().getString(USER_COUNTRY, "IN");
     }
 
     public void setUserCountry(String country) {
