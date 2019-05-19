@@ -1,7 +1,7 @@
 # YouPlay
 Play YouTube videos in background in Android
 
-Download the APK(2.2mb) here - https://bit.ly/2S0RTmS
+**Note:** This app is outdated so it may or may not work on latest Android versions.
 
 In case you want to build it in Android Studio:
 1. Add your own YouTube api key and Google-web-client-id in build.gradle file.
